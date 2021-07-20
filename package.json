@@ -1,0 +1,22 @@
+{
+  "name": "11_pug_y_ejs",
+  "version": "1.0.0",
+  "description": "Desafío: Pug y Ejs",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/csena72/11_pug_y_ejs.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/csena72/11_pug_y_ejs/issues"
+  },
+  "homepage": "https://github.com/csena72/11_pug_y_ejs#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
