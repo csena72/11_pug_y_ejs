@@ -1,0 +1,38 @@
+
+include includes/head.pug
+
+.col-md-6.mx-auto.text-center.mt-5
+  .header-title
+    h2.wv-heading--subtitle
+      | Agregar un producto
+.row.mt-4
+  .col-md-4.mx-auto
+    .myform.form
+      form(action='/api/productos' method='post' name='productos')
+        .form-group
+          input#title.form-control.my-input(type='text' name='title' placeholder='Nombre' required='')
+        .form-group
+          input#price.form-control.my-input(type='text' name='price' placeholder='Precio' required='')
+        .form-group
+          select.form-control.b-select(name='thumbnail' required='')
+            option(value='' disabled='' selected='') Selecciona una fruta
+            option(value='anana') anan&aacute;
+            option(value='banana') banana
+            option(value='cereza') cereza
+            option(value='durazno') durazno
+            option(value='frutilla') frutilla
+            option(value='manzana') manzana
+            option(value='naranja') naranja
+            option(value='pera') pera
+            option(value='sandia') sand&iacute;a
+            option(value='uva') uva
+        .text-center
+          button.btn.btn-block.send-button.tx-tfm(type='submit') Agregar producto
+        .col-md-12
+          .login-or
+            hr.hr-or
+        p.small.mt-3
+          | Para ver el listado de productos hacer 
+          a.ps-hero__content__link(href='/productos/vista') click aqu&iacute;
+          
+          include includes/foot.pug

@@ -1,0 +1,34 @@
+
+include includes/head.pug
+
+.col-md-6.mx-auto.text-center.mt-5
+  .header-title
+    h2.wv-heading--subtitle
+      | Mis productos
+.row.mt-4
+  .col-md-6.mx-auto
+    table.table.table-striped.table-condensed
+      thead
+        tr
+          th #
+          th Nombre
+          th Precio
+          th Imagen
+      tbody
+        each producto in productos
+          tr
+            td=producto.id
+            td=producto.title
+            td=producto.price
+            td              
+              img(src='/assets/img/' + producto.thumbnail +'.png', alt=producto.thumbnail)
+        else
+          tr
+            td.text-center(colspan='4') No hay productos
+    .login-or
+      hr.hr-or
+    p.small.mt-3
+      | Para volver al formulario y seguir agregando productos hacer 
+      a.ps-hero__content__link(href='/') click aqu&iacute;
+
+      include includes/foot.pug
