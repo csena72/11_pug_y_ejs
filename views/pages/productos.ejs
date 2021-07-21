@@ -1,0 +1,51 @@
+
+<%- include('../partials/head') %>
+
+<div class="col-md-6 mx-auto text-center mt-5">
+  <div class="header-title">
+    <h2 class="wv-heading--subtitle">
+      Mis productos
+    </h2>
+  </div>
+</div>
+
+<div class="row mt-4">
+  <div class="col-md-6 mx-auto">
+    <table class="table table-striped table-condensed">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Imagen</th>
+        </tr>
+      </thead>
+      <tbody>        
+
+        <% productos.forEach(function(producto){ %>
+          <tr>
+            <td><%= producto.id %></td>
+            <td><%= producto.title %></td>
+            <td><%= producto.price %></td>
+            <td> <img src="/assets/img/<%=producto.thumbnail%>.png" alt=" <%=producto.thumbnail%>" /></td>
+          </tr>    
+        <% }); %>
+
+        <% if (productos.length == 0) { %>
+          <tr>
+            <td class="text-center" colspan="4">No hay productos</td>
+          </tr>
+        <% } %>
+
+      </tbody>
+    </table>
+    <div class="login-or">
+      <hr class="hr-or">
+    </div>
+    <p class="small mt-3">Para volver al formulario y seguir agregando productos hacer <a href="/"
+        class="ps-hero__content__link">click aquí</a>
+    </p>
+  </div>
+</div>
+
+<%- include('../partials/footer') %>
